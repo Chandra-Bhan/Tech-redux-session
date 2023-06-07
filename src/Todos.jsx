@@ -32,10 +32,8 @@ function Todos() {
           <button onClick={() => dispatch(TodosSlice.actions.deleteTodo(todo))}>
             Delete
           </button>
-          <button onClick={() => navigate(`/user/:${todo.id}`)}>
-            Navigate
-          </button>
-          {/* <Link to="/user">nav </Link> */}
+          <button onClick={() => navigate(`/user/${todo.id}`)}>Navigate</button>
+          <Link to="/user/hello">nav </Link>
         </div>
       ))}
     </div>
