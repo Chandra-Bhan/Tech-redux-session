@@ -15,6 +15,14 @@ export const TodosSlice = createSlice({
       // ["cb","task1","task2"].splice(1,2,"task3")
       state.todo.splice(ind, 1);
     },
+    updation: (state, action) => {
+      const updatedData = action.payload;
+      console.log(updatedData);
+      const index = state.todo.findIndex((task) => task.id == updatedData.id);
+      if (index != -1) {
+        state.todo[index] = updatedData;
+      }
+    },
   },
 });
 
